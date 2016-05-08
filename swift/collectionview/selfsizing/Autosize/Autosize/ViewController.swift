@@ -25,7 +25,7 @@ class ViewController: UIViewController {
 
     func makeData() {
         words = [String]()
-        for _ in 1...100 {
+        for _ in 1...1000 {
             let string = randomStringWithSentenceLength(100)
             words!.append(string)
         }
@@ -74,9 +74,8 @@ extension ViewController: UICollectionViewDataSource {
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier(reuseIdentifier, forIndexPath: indexPath) as! Cell
 
         let word = words![indexPath.item]
-        let info = Int(arc4random_uniform(6) + 1)
         let anotherWord = randomStringWithSentenceLength(10)
-        cell.setModel(indexPath.item, name: word, description: anotherWord, info: info)
+        cell.setModel(indexPath.item, name: word, description: anotherWord)
 
         return cell
     }

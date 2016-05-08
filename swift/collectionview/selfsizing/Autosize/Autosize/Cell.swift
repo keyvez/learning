@@ -109,10 +109,10 @@ class Cell: UICollectionViewCell {
     infoLabel.text = ""
   }
 
-  func setModel(index: Int, name: String, description: String, info: Int) {
+  func setModel(index: Int, name: String, description: String) {
     label.text = name
     subLabel.text = description
-    infoLabel.text = String(info)
+    infoLabel.text = String(index+1)
 
     showSeparator = index > 0
   }

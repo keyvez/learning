@@ -56,13 +56,13 @@ func randStartingLetter() -> String {
   return letter.uppercaseString
 }
 
-func randomStringWithSentenceLength (len : UInt32) -> String {
+func randomStringWithSentenceLength (len: UInt32) -> String {
   var randomString = String()
 
   let numWords = Int(arc4random_uniform(len) + 1)
   randomString += randStartingLetter()
   for i in 0...numWords {
-    let numLetters = Int(arc4random_uniform(10) + 1)
+    let numLetters = Int(arc4random_uniform(6) + 1)
     if i > 0 {
       randomString += " "
     }
