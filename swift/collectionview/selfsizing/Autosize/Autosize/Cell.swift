@@ -128,13 +128,5 @@ class Cell: UICollectionViewCell {
     showSeparator = index > 0
   }
 
-  @available(iOS 8.0, *) override func preferredLayoutAttributesFittingAttributes(layoutAttributes: UICollectionViewLayoutAttributes) -> UICollectionViewLayoutAttributes {
-
-    let v = super.preferredLayoutAttributesFittingAttributes(layoutAttributes)
-    print(v)
-
-    return v
-  }
-
 }
 
