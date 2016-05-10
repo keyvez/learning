@@ -74,7 +74,12 @@ class Cell: UICollectionViewCell {
     let constraints = [
         view.leftAnchor.constraintEqualToAnchor(leftAnchor),
         view.rightAnchor.constraintEqualToAnchor(rightAnchor),
-        view.topAnchor.constraintEqualToAnchor(topAnchor),
+        // Specifying view.topAnchor constraint equal to topAnchor
+        // makes all the vertical constraints unsatisfiable, for
+        // some unknown reason.
+        //
+        // Leave this line commented out until reason is known.
+        // view.topAnchor.constraintEqualToAnchor(topAnchor),
         view.bottomAnchor.constraintEqualToAnchor(bottomAnchor),
 
         separator.topAnchor.constraintEqualToAnchor(view.topAnchor),
