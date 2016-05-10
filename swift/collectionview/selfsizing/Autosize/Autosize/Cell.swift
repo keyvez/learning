@@ -50,20 +50,31 @@ class Cell: UICollectionViewCell {
     super.init(coder: aDecoder)
   }
 
+  func estimatedSize() -> CGSize {
+    let height = floor(label.font.lineHeight) + // title title
+        floor(subLabel.font.lineHeight) + // start time title
+        1 + // separator
+        7 + // margin between separator and title
+        8 // margin between title and time
+    return CGSizeMake(frame.width, height)
+  }
+
   func addConstraints() {
     [contentView, separator, label, subLabel, infoLabel].forEach {
       $0.translatesAutoresizingMaskIntoConstraints = false
     }
 
     contentView.setContentHuggingPriority(1, forAxis: .Horizontal)
-    contentView.setContentCompressionResistancePriority(999, forAxis: .Horizontal)
+    contentView.setContentCompressionResistancePriority(751, forAxis: .Horizontal)
 
     label.setContentHuggingPriority(1, forAxis: .Horizontal)
-    label.setContentCompressionResistancePriority(999, forAxis: .Horizontal)
+    label.setContentCompressionResistancePriority(751, forAxis: .Horizontal)
+
+    separator.setContentHuggingPriority(751, forAxis: .Vertical)
 
     subLabel.setContentHuggingPriority(1, forAxis: .Vertical)
     subLabel.setContentHuggingPriority(49, forAxis: .Horizontal)
-    subLabel.setContentCompressionResistancePriority(999, forAxis: .Vertical)
+    subLabel.setContentCompressionResistancePriority(751, forAxis: .Vertical)
 
     infoLabel.setContentHuggingPriority(251, forAxis: .Vertical)
     infoLabel.setContentHuggingPriority(251, forAxis: .Horizontal)
@@ -72,14 +83,9 @@ class Cell: UICollectionViewCell {
     let view = contentView
 
     let constraints = [
-        view.leftAnchor.constraintEqualToAnchor(leftAnchor),
-        view.rightAnchor.constraintEqualToAnchor(rightAnchor),
-        // Specifying view.topAnchor constraint equal to topAnchor
-        // makes all the vertical constraints unsatisfiable, for
-        // some unknown reason.
-        //
-        // Leave this line commented out until reason is known.
-        // view.topAnchor.constraintEqualToAnchor(topAnchor),
+        view.leadingAnchor.constraintEqualToAnchor(leadingAnchor),
+        view.trailingAnchor.constraintEqualToAnchor(trailingAnchor),
+        view.topAnchor.constraintEqualToAnchor(topAnchor),
         view.bottomAnchor.constraintEqualToAnchor(bottomAnchor),
 
         separator.topAnchor.constraintEqualToAnchor(view.topAnchor),
@@ -121,5 +127,14 @@ class Cell: UICollectionViewCell {
 
     showSeparator = index > 0
   }
+
+  @available(iOS 8.0, *) override func preferredLayoutAttributesFittingAttributes(layoutAttributes: UICollectionViewLayoutAttributes) -> UICollectionViewLayoutAttributes {
+
+    let v = super.preferredLayoutAttributesFittingAttributes(layoutAttributes)
+    print(v)
+
+    return v
+  }
+
 }
 
