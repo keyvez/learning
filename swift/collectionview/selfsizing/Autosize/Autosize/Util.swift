@@ -70,7 +70,7 @@ func randomStringWithSentenceLength (len: UInt32) -> String {
       randomString += randMiddleLetter()
     }
     randomString += punctuate() ? randMiddlePunctuation() : ""
-    var quantity = quantify() ? randNumber() : ""
+    let quantity = quantify() ? randNumber() : ""
     randomString += quantity
   }
   randomString += randEndPunctuation()
