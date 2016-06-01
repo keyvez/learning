@@ -13,6 +13,7 @@
 		B550F7D73AA7A2B66E842C65 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B550F55028EB20D266A3430D /* LaunchScreen.storyboard */; };
 		B550F8092B1469CA0162869C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B550F015E18005B082A864E3 /* AppDelegate.swift */; };
 		B550FA1D7D79669135AED99F /* Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B550FD80BC6515F4AEC6891C /* Cell.swift */; };
+		B550FC4CCCAE1E34A7B9982A /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = B550FF079A1FE0C4AA120FC2 /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +24,7 @@
 		B550F7275AC5FDB3F9FEFBCB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B550F832E2FC27FB6F4C6DA8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B550FD80BC6515F4AEC6891C /* Cell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cell.swift; sourceTree = "<group>"; };
+		B550FF079A1FE0C4AA120FC2 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		B550FF8AC8E2A03388B97FEC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.info; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -50,6 +52,7 @@
 			children = (
 				B550F0E7C95D6450368D692B /* Products */,
 				B550FE515BCA710E90E688BE /* Autosize */,
+				B550FF079A1FE0C4AA120FC2 /* README.md */,
 			);
 			sourceTree = "<group>";
 		};
@@ -136,6 +139,7 @@
 				B550F5C16B107883981A9E9A /* ViewController.swift in Sources */,
 				B550FA1D7D79669135AED99F /* Cell.swift in Sources */,
 				B550F3F440F5D8D3610676FB /* Util.swift in Sources */,
+				B550FC4CCCAE1E34A7B9982A /* README.md in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
