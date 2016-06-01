@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B550F3D564DAF9DE5D7CD2E8 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = B550FC349ED904D92E0D1358 /* README.md */; };
 		B550F3F440F5D8D3610676FB /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = B550F3DE76B2C3660EC5D6D3 /* Util.swift */; };
 		B550F4A3E103D3E6EE20F3A5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B550F832E2FC27FB6F4C6DA8 /* Assets.xcassets */; };
 		B550F5C16B107883981A9E9A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B550F0A6018316B76FCEA07B /* ViewController.swift */; };
@@ -22,6 +23,7 @@
 		B550F5CC40917D6012A4A782 /* AutosizeImage.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AutosizeImage.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B550F7275AC5FDB3F9FEFBCB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B550F832E2FC27FB6F4C6DA8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B550FC349ED904D92E0D1358 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		B550FD80BC6515F4AEC6891C /* Cell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cell.swift; sourceTree = "<group>"; };
 		B550FF8AC8E2A03388B97FEC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.info; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -50,6 +52,7 @@
 			children = (
 				B550F0E7C95D6450368D692B /* Products */,
 				B550FE515BCA710E90E688BE /* Autosize */,
+				B550FC349ED904D92E0D1358 /* README.md */,
 			);
 			sourceTree = "<group>";
 		};
@@ -136,6 +139,7 @@
 				B550F5C16B107883981A9E9A /* ViewController.swift in Sources */,
 				B550FA1D7D79669135AED99F /* Cell.swift in Sources */,
 				B550F3F440F5D8D3610676FB /* Util.swift in Sources */,
+				B550F3D564DAF9DE5D7CD2E8 /* README.md in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

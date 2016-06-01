@@ -9,7 +9,9 @@
       <sourceFolder url="file://$MODULE_DIR$/Autosize/Info.plist" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Autosize/Assets.xcassets" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Autosize/Base.lproj/LaunchScreen.storyboard" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/README.md" isTestSource="false" />
     </content>
+    <content url="file://$USER_HOME$/Library/Caches/AppCode2016.1/DerivedData/AutosizeImage-fximyaekvicitadkinmcbzngnjrq/Build/Intermediates/AutosizeImage.build/Debug-iphoneos/AutosizeImage.build/DerivedSources" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module-library">
       <library name="Header Search Paths">
