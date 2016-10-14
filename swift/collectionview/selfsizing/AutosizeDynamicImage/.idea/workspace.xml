@@ -2,11 +2,37 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9fed4722-4709-4fb7-92b0-dc759a4bf9bb" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/AutosizeDynamicImage.xcodeproj/project.pbxproj" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/AutosizeDynamicImage.xcodeproj/project.xcworkspace/contents.xcworkspacedata" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/AutosizeDynamicImage.xcodeproj/project.xcworkspace/xcuserdata/gaurav.xcuserdatad/UserInterfaceState.xcuserstate" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/AutosizeDynamicImage.xcodeproj/xcuserdata/gaurav.xcuserdatad/xcschemes/Autosize.xcscheme" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/AutosizeDynamicImage.xcodeproj/xcuserdata/gaurav.xcuserdatad/xcschemes/xcschememanagement.plist" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Autosize/Autosize.xcodeproj/project.xcworkspace/xcuserdata/gmisra.xcuserdatad/UserInterfaceState.xcuserstate" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/AutosizeDynamicImage.xcodeproj/project.xcworkspace/xcuserdata/gmisra.xcuserdatad/UserInterfaceState.xcuserstate" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../AutosizeImage/AutosizeImage.xcodeproj/project.xcworkspace/xcuserdata/gmisra.xcuserdatad/UserInterfaceState.xcuserstate" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Autosize/Autosize.xcodeproj/project.xcworkspace/xcuserdata/gmisra.xcuserdatad/xcschemes/xcschememanagement.plist" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Autosize/Autosize.xcodeproj/xcuserdata/gmisra.xcuserdatad/xcschemes/Autosize.xcscheme" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Autosize/Autosize.xcodeproj/xcuserdata/gmisra.xcuserdatad/xcschemes/xcschememanagement.plist" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/AutosizeDynamicImage.xcodeproj/project.xcworkspace/xcuserdata/gmisra.xcuserdatad/xcschemes/xcschememanagement.plist" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/AutosizeDynamicImage.xcodeproj/xcuserdata/gmisra.xcuserdatad/xcschemes/AutosizeDynamicImage.xcscheme" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/AutosizeDynamicImage.xcodeproj/xcuserdata/gmisra.xcuserdatad/xcschemes/xcschememanagement.plist" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../AutosizeImage/AutosizeImage.xcodeproj/project.xcworkspace/xcuserdata/gmisra.xcuserdatad/xcschemes/xcschememanagement.plist" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../AutosizeImage/AutosizeImage.xcodeproj/xcuserdata/gmisra.xcuserdatad/xcschemes/AutosizeImage.xcscheme" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../AutosizeImage/AutosizeImage.xcodeproj/xcuserdata/gmisra.xcuserdatad/xcschemes/xcschememanagement.plist" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Autosize/Autosize.xcodeproj/project.pbxproj" afterPath="$PROJECT_DIR$/../Autosize/Autosize.xcodeproj/project.pbxproj" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Autosize/Autosize/AppDelegate.swift" afterPath="$PROJECT_DIR$/../Autosize/Autosize/AppDelegate.swift" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Autosize/Autosize/Cell.swift" afterPath="$PROJECT_DIR$/../Autosize/Autosize/Cell.swift" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Autosize/Autosize/Util.swift" afterPath="$PROJECT_DIR$/../Autosize/Autosize/Util.swift" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Autosize/Autosize/ViewController.swift" afterPath="$PROJECT_DIR$/../Autosize/Autosize/ViewController.swift" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/Autosize.iml" afterPath="$PROJECT_DIR$/.idea/Autosize.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Autosize/AppDelegate.swift" afterPath="$PROJECT_DIR$/Autosize/AppDelegate.swift" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Autosize/Cell.swift" afterPath="$PROJECT_DIR$/Autosize/Cell.swift" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Autosize/Util.swift" afterPath="$PROJECT_DIR$/Autosize/Util.swift" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Autosize/ViewController.swift" afterPath="$PROJECT_DIR$/Autosize/ViewController.swift" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AutosizeDynamicImage.xcodeproj/project.pbxproj" afterPath="$PROJECT_DIR$/AutosizeDynamicImage.xcodeproj/project.pbxproj" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../AutosizeImage/.idea/Autosize.iml" afterPath="$PROJECT_DIR$/../AutosizeImage/.idea/Autosize.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../AutosizeImage/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../AutosizeImage/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../AutosizeImage/Autosize/AppDelegate.swift" afterPath="$PROJECT_DIR$/../AutosizeImage/Autosize/AppDelegate.swift" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../AutosizeImage/Autosize/Cell.swift" afterPath="$PROJECT_DIR$/../AutosizeImage/Autosize/Cell.swift" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../AutosizeImage/Autosize/Util.swift" afterPath="$PROJECT_DIR$/../AutosizeImage/Autosize/Util.swift" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../AutosizeImage/Autosize/ViewController.swift" afterPath="$PROJECT_DIR$/../AutosizeImage/Autosize/ViewController.swift" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../AutosizeImage/AutosizeImage.xcodeproj/project.pbxproj" afterPath="$PROJECT_DIR$/../AutosizeImage/AutosizeImage.xcodeproj/project.pbxproj" />
     </list>
     <ignored path="Autosize.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -17,27 +43,15 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="iphonesimulatoriPhone_6s_9.3_x86_64_1" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="iphoneos" />
   <component name="FavoritesManager">
     <favorites_list name="Autosize" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="ViewController.swift" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Autosize/ViewController.swift">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="336">
-              <caret line="98" column="3" selection-start-line="98" selection-start-column="3" selection-end-line="98" selection-end-column="3" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../../.." />
@@ -137,13 +151,12 @@
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="OverrideImplement.combined" value="true" />
   </component>
-  <component name="RunManager" selected="Application.Autosize">
-    <configuration default="false" name="Autosize" type="AppleRunConfiguration" factoryName="Application" temporary="true" WORKING_DIR="" PASS_PARENT_ENVS_2="true" PROJECT_NAME="AutosizeDynamicImage" TARGET_NAME="AutosizeDynamicImage" CONFIG_NAME="Debug" SCHEME_NAME="Autosize" RUN_TARGET_PROJECT_NAME="AutosizeDynamicImage" RUN_TARGET_NAME="AutosizeDynamicImage" MAKE_ACTIVE="TRUE" WAIT_FOR="FALSE">
-      <envs />
-      <method />
-    </configuration>
+  <component name="RunManager" selected="Application.AutosizeDynamicImage">
     <configuration default="true" type="AppleRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Autosize" TARGET_NAME="Autosize" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Autosize" RUN_TARGET_NAME="Autosize" MAKE_ACTIVE="TRUE" WAIT_FOR="FALSE">
       <envs />
+      <EXTENSION ID="org.jetbrains.appcode.reveal.RevealRunConfigurationExtension">
+        <REVEAL_SETTINGS autoInject="false" autoInstall="true" askToEnableAutoInstall="true" />
+      </EXTENSION>
       <method />
     </configuration>
     <configuration default="true" type="BashConfigurationType" factoryName="Bash">
@@ -181,21 +194,37 @@
       <envs />
       <method />
     </configuration>
+    <configuration default="false" name="AutosizeDynamicImage" type="AppleRunConfiguration" factoryName="Application" WORKING_DIR="" PASS_PARENT_ENVS_2="true" PROJECT_NAME="AutosizeDynamicImage" TARGET_NAME="AutosizeDynamicImage" CONFIG_NAME="Debug" SCHEME_NAME="AutosizeDynamicImage" RUN_TARGET_PROJECT_NAME="AutosizeDynamicImage" RUN_TARGET_NAME="AutosizeDynamicImage" MAKE_ACTIVE="TRUE" WAIT_FOR="FALSE">
+      <envs />
+      <EXTENSION ID="org.jetbrains.appcode.reveal.RevealRunConfigurationExtension">
+        <REVEAL_SETTINGS autoInject="false" autoInstall="true" askToEnableAutoInstall="true" />
+      </EXTENSION>
+      <method />
+    </configuration>
     <list size="1">
-      <item index="0" class="java.lang.String" itemvalue="Application.Autosize" />
+      <item index="0" class="java.lang.String" itemvalue="Application.AutosizeDynamicImage" />
     </list>
-    <recent_temporary>
-      <list size="1">
-        <item index="0" class="java.lang.String" itemvalue="Application.Autosize" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="ShelveChangesManager" show_recycled="false">
     <option name="remove_strategy" value="false" />
   </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="9fed4722-4709-4fb7-92b0-dc759a4bf9bb" name="Default" comment="" />
+      <created>1476485851404</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1476485851404</updated>
+      <workItem from="1476485852776" duration="173000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="173000" />
+  </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1440" height="873" extended-state="6" />
-    <editor active="true" />
+    <frame x="0" y="23" width="1440" height="873" extended-state="0" />
+    <editor active="false" />
     <layout>
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24947146" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -206,6 +235,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290653" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290653" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290653" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -274,6 +304,14 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Autosize/ViewController.swift">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Autosize/AppDelegate.swift">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
@@ -294,7 +332,6 @@
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="100">
             <caret line="5" column="21" selection-start-line="5" selection-start-column="21" selection-end-line="5" selection-end-column="21" />
-            <folding />
           </first_editor>
           <second_editor />
         </state>
@@ -304,7 +341,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="12" selection-start-line="0" selection-start-column="12" selection-end-line="0" selection-end-column="12" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -312,14 +348,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1080">
           <caret line="56" column="44" selection-start-line="56" selection-start-column="44" selection-end-line="56" selection-end-column="44" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Autosize/ViewController.swift">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="98" column="3" selection-start-line="98" selection-start-column="3" selection-end-line="98" selection-end-column="3" />
+        <state relative-caret-position="96">
+          <caret line="17" column="20" selection-start-line="17" selection-start-column="20" selection-end-line="17" selection-end-column="20" />
           <folding />
         </state>
       </provider>

@@ -22,13 +22,13 @@ class ViewController: UIViewController {
     let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
     layout.minimumLineSpacing = 0
     let cellWidth = view.bounds.width
-    let cell = Cell(frame: CGRectMake(0, 0, cellWidth, 0))
+    let cell = Cell(frame: CGRect(x: 0, y: 0, width: cellWidth, height: 0))
     layout.estimatedItemSize = cell.estimatedSize()
 
     collectionView = UICollectionView(frame: view.frame, collectionViewLayout: layout)
     collectionView.dataSource = self
-    collectionView.registerClass(Cell.self, forCellWithReuseIdentifier: reuseIdentifier)
-    collectionView.backgroundColor = UIColor.whiteColor()
+    collectionView.register(Cell.self, forCellWithReuseIdentifier: reuseIdentifier)
+    collectionView.backgroundColor = UIColor.white
 
     view.addSubview(collectionView)
   }
@@ -37,13 +37,13 @@ class ViewController: UIViewController {
     collectionView.translatesAutoresizingMaskIntoConstraints = false
 
     let constraints = [
-        collectionView.topAnchor.constraintEqualToAnchor(view.topAnchor),
-        collectionView.bottomAnchor.constraintEqualToAnchor(view.bottomAnchor),
-        collectionView.leadingAnchor.constraintEqualToAnchor(view.leadingAnchor),
-        collectionView.trailingAnchor.constraintEqualToAnchor(view.trailingAnchor),
+        collectionView.topAnchor.constraint(equalTo: view.topAnchor),
+        collectionView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+        collectionView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+        collectionView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
     ]
 
-    constraints.forEach { $0.active = true }
+    constraints.forEach { $0.isActive = true }
   }
 }
 
@@ -51,11 +51,11 @@ class ViewController: UIViewController {
 //MARK: UICollectionViewDataSource
 extension ViewController: UICollectionViewDataSource {
 
-  func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
+  func numberOfSections(in collectionView: UICollectionView) -> Int {
     return 1
   }
 
-  func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+  func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
     if colors == nil {
       colors = [UIColor]()
       heights = [CGFloat]()
@@ -68,14 +68,14 @@ extension ViewController: UICollectionViewDataSource {
     return colors!.count
   }
 
-  func collectionView(collectionView: UICollectionView,
-                      cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-    let cell = collectionView.dequeueReusableCellWithReuseIdentifier(reuseIdentifier,
-        forIndexPath: indexPath) as! Cell
+  func collectionView(_ collectionView: UICollectionView,
+                      cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+    let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier,
+        for: indexPath) as! Cell
 
-    let height = heights![indexPath.item]
-    let image = UIImage.imageWithColor(colors![indexPath.item], size: CGSizeMake(375.0, height))
-    cell.setModel(indexPath.item, image: image)
+    let height = heights![(indexPath as NSIndexPath).item]
+    let image = UIImage.imageWithColor(colors![(indexPath as NSIndexPath).item], size: CGSize(width: 375.0, height: height))
+    cell.setModel((indexPath as NSIndexPath).item, image: image)
 
     return cell
   }

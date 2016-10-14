@@ -4,17 +4,17 @@ import UIKit
 
 
 class Cell: UICollectionViewCell {
-  lazy private var imageView:UIImageView = UIImageView()
-  lazy private var label:UILabel = UILabel()
+  lazy var imageView:UIImageView = UIImageView()
+  lazy var label:UILabel = UILabel()
 
   override init(frame: CGRect) {
     super.init(frame: frame)
 
-    label.textColor = UIColor.whiteColor()
+    label.textColor = UIColor.white
     label.numberOfLines = 0
-    label.textAlignment = .Center
+    label.textAlignment = .center
 
-    contentView.backgroundColor = UIColor.brownColor()
+    contentView.backgroundColor = UIColor.brown
 
     contentView.addSubview(imageView)
     contentView.addSubview(label)
@@ -27,7 +27,7 @@ class Cell: UICollectionViewCell {
   }
 
   func estimatedSize() -> CGSize {
-    return CGSizeMake(frame.width, 100.0)
+    return CGSize(width: frame.width, height: 100.0)
   }
 
   func addConstraints() {
@@ -38,23 +38,23 @@ class Cell: UICollectionViewCell {
     let view = contentView
 
     let constraints = [
-        view.leadingAnchor.constraintEqualToAnchor(leadingAnchor),
-        view.trailingAnchor.constraintEqualToAnchor(trailingAnchor),
-        view.topAnchor.constraintEqualToAnchor(topAnchor),
-        view.bottomAnchor.constraintEqualToAnchor(bottomAnchor),
+        view.leadingAnchor.constraint(equalTo: leadingAnchor),
+        view.trailingAnchor.constraint(equalTo: trailingAnchor),
+        view.topAnchor.constraint(equalTo: topAnchor),
+        view.bottomAnchor.constraint(equalTo: bottomAnchor),
 
-        imageView.topAnchor.constraintEqualToAnchor(view.topAnchor),
-        imageView.leadingAnchor.constraintEqualToAnchor(view.leadingAnchor),
-        imageView.trailingAnchor.constraintEqualToAnchor(view.trailingAnchor),
-        imageView.bottomAnchor.constraintEqualToAnchor(view.bottomAnchor),
+        imageView.topAnchor.constraint(equalTo: view.topAnchor),
+        imageView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+        imageView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+        imageView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
 
-        label.topAnchor.constraintEqualToAnchor(imageView.topAnchor),
-        label.leadingAnchor.constraintEqualToAnchor(imageView.leadingAnchor),
-        label.trailingAnchor.constraintEqualToAnchor(imageView.trailingAnchor),
-        label.bottomAnchor.constraintEqualToAnchor(imageView.bottomAnchor),
+        label.topAnchor.constraint(equalTo: imageView.topAnchor),
+        label.leadingAnchor.constraint(equalTo: imageView.leadingAnchor),
+        label.trailingAnchor.constraint(equalTo: imageView.trailingAnchor),
+        label.bottomAnchor.constraint(equalTo: imageView.bottomAnchor),
     ]
 
-    constraints.forEach { $0.active = true }
+    constraints.forEach { $0.isActive = true }
   }
 
   override func prepareForReuse() {
@@ -63,14 +63,14 @@ class Cell: UICollectionViewCell {
     label.text = ""
   }
 
-  func setModel(index: Int, image: UIImage) {
+  func setModel(_ index: Int, image: UIImage) {
     imageView.image = image
-    imageView.backgroundColor = UIColor.grayColor()
+    imageView.backgroundColor = UIColor.gray
     label.text = String(index)
   }
 
-  func setSize(size: CGSize) {
-    imageView.image = UIImage.imageWithColor(UIColor.clearColor(), size: size)
+  func setSize(_ size: CGSize) {
+    imageView.image = UIImage.imageWithColor(UIColor.clear, size: size)
   }
 
 }

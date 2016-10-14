@@ -23,13 +23,13 @@ class ViewController: UIViewController {
     let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
     layout.minimumLineSpacing = 0
     let cellWidth = view.bounds.width
-    let cell = Cell(frame: CGRectMake(0, 0, cellWidth, 0))
+    let cell = Cell(frame: CGRect(x: 0, y: 0, width: cellWidth, height: 0))
     layout.estimatedItemSize = cell.estimatedSize()
 
     collectionView = UICollectionView(frame: view.frame, collectionViewLayout: layout)
     collectionView.dataSource = self
-    collectionView.registerClass(Cell.self, forCellWithReuseIdentifier: reuseIdentifier)
-    collectionView.backgroundColor = UIColor.whiteColor()
+    collectionView.register(Cell.self, forCellWithReuseIdentifier: reuseIdentifier)
+    collectionView.backgroundColor = UIColor.white
 
     view.addSubview(collectionView)
   }
@@ -38,13 +38,13 @@ class ViewController: UIViewController {
     collectionView.translatesAutoresizingMaskIntoConstraints = false
 
     let constraints = [
-        collectionView.topAnchor.constraintEqualToAnchor(view.topAnchor),
-        collectionView.bottomAnchor.constraintEqualToAnchor(view.bottomAnchor),
-        collectionView.leadingAnchor.constraintEqualToAnchor(view.leadingAnchor),
-        collectionView.trailingAnchor.constraintEqualToAnchor(view.trailingAnchor),
+        collectionView.topAnchor.constraint(equalTo: view.topAnchor),
+        collectionView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+        collectionView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+        collectionView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
     ]
 
-    constraints.forEach { $0.active = true }
+    constraints.forEach { $0.isActive = true }
   }
 }
 
@@ -52,11 +52,11 @@ class ViewController: UIViewController {
 //MARK: UICollectionViewDataSource
 extension ViewController: UICollectionViewDataSource {
 
-  func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
+  func numberOfSections(in collectionView: UICollectionView) -> Int {
     return 1
   }
 
-  func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+  func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
     if colors == nil {
       colors = [UIColor]()
       heights = [CGFloat]()
@@ -71,30 +71,30 @@ extension ViewController: UICollectionViewDataSource {
     return colors!.count
   }
 
-  func collectionView(collectionView: UICollectionView,
-                      cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-    let cell = collectionView.dequeueReusableCellWithReuseIdentifier(reuseIdentifier,
-        forIndexPath: indexPath) as! Cell
+  func collectionView(_ collectionView: UICollectionView,
+                      cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+    let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier,
+        for: indexPath) as! Cell
 
-    if self.fetched![indexPath.item] {
+    if self.fetched![(indexPath as NSIndexPath).item] {
       self.setImage(cell, indexPath: indexPath)
     } else {
-      let height = self.heights![indexPath.item]
-      cell.setSize(CGSizeMake(collectionView.bounds.width, height))
+      let height = self.heights![(indexPath as NSIndexPath).item]
+      cell.setSize(CGSize(width: collectionView.bounds.width, height: height))
       let randomTime = 1 / (Double) (arc4random_uniform(20) + 1)
-      let delayTime = dispatch_time(DISPATCH_TIME_NOW, Int64(randomTime * Double(NSEC_PER_SEC)))
-      dispatch_after(delayTime, dispatch_get_main_queue()) {
+      let delayTime = DispatchTime.now() + Double(Int64(randomTime * Double(NSEC_PER_SEC))) / Double(NSEC_PER_SEC)
+      DispatchQueue.main.asyncAfter(deadline: delayTime) {
         self.setImage(cell, indexPath: indexPath)
-        self.fetched![indexPath.item] = true
+        self.fetched![(indexPath as NSIndexPath).item] = true
       }
     }
 
     return cell
   }
 
-  func setImage(cell: Cell, indexPath: NSIndexPath) {
-    let height = heights![indexPath.item]
-    let image = UIImage.imageWithColor(colors![indexPath.item], size: CGSizeMake(375.0, height))
-    cell.setModel(indexPath.item, image: image)
+  func setImage(_ cell: Cell, indexPath: IndexPath) {
+    let height = heights![(indexPath as NSIndexPath).item]
+    let image = UIImage.imageWithColor(colors![(indexPath as NSIndexPath).item], size: CGSize(width: 375.0, height: height))
+    cell.setModel((indexPath as NSIndexPath).item, image: image)
   }
 }
