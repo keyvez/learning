@@ -4,8 +4,8 @@ import UIKit
 
 
 class Cell: UICollectionViewCell {
-  lazy var imageView:UIImageView = UIImageView()
-  lazy var label:UILabel = UILabel()
+  lazy var imageView = UIImageView()
+  lazy var label = UILabel()
 
   override init(frame: CGRect) {
     super.init(frame: frame)
@@ -26,8 +26,8 @@ class Cell: UICollectionViewCell {
     super.init(coder: aDecoder)
   }
 
-  func estimatedSize() -> CGSize {
-    return CGSize(width: frame.width, height: 100.0)
+  static func estimatedSize(forWidth width: CGFloat) -> CGSize {
+    return CGSize(width: width, height: 100.0)
   }
 
   func addConstraints() {
@@ -56,13 +56,6 @@ class Cell: UICollectionViewCell {
 
     constraints.forEach { $0.isActive = true }
   }
-
-//  override func prepareForReuse() {
-//    super.prepareForReuse()
-
-//    imageView.image = nil
-//    label.text = ""
-//  }
 
   func setModel(_ index: Int, image: UIImage) {
     imageView.image = image

@@ -34,8 +34,7 @@ class ViewController: UIViewController {
     func makeCollectionView() {
         let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
         let cellWidth = view.bounds.width
-        var cell = Cell(frame: CGRectMake(0, 0, cellWidth, 0))
-        layout.estimatedItemSize = cell.estimatedSize()
+        layout.estimatedItemSize = Cell.estimatedSize(forWidth: cellWidth)
 
         collectionView = UICollectionView(frame: view.frame, collectionViewLayout: layout)
         collectionView.dataSource = self
