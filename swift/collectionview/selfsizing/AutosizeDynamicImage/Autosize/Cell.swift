@@ -26,8 +26,8 @@ class Cell: UICollectionViewCell {
     super.init(coder: aDecoder)
   }
 
-  func estimatedSize() -> CGSize {
-    return CGSize(width: frame.width, height: 100.0)
+  func estimatedSize(forWidth width: CGFloat) -> CGSize {
+    return CGSize(width: width, height: 100.0)
   }
 
   func addConstraints() {

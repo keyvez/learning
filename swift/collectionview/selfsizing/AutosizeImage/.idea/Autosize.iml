@@ -2,6 +2,7 @@
 <module type="CIDR_MODULE" version="4">
   <component name="NewModuleRootManager">
     <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/README.md" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Autosize/AppDelegate.swift" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Autosize/Util.swift" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Autosize/Cell.swift" isTestSource="false" />
@@ -9,7 +10,6 @@
       <sourceFolder url="file://$MODULE_DIR$/Autosize/Info.plist" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Autosize/Assets.xcassets" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Autosize/Base.lproj/LaunchScreen.storyboard" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/README.md" isTestSource="false" />
     </content>
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module-library">

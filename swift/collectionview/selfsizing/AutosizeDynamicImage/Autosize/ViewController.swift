@@ -23,8 +23,7 @@ class ViewController: UIViewController {
     let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
     layout.minimumLineSpacing = 0
     let cellWidth = view.bounds.width
-    let cell = Cell(frame: CGRect(x: 0, y: 0, width: cellWidth, height: 0))
-    layout.estimatedItemSize = cell.estimatedSize()
+    layout.estimatedItemSize = cell.estimatedSize(forWidth: cellWidth)
 
     collectionView = UICollectionView(frame: view.frame, collectionViewLayout: layout)
     collectionView.dataSource = self
