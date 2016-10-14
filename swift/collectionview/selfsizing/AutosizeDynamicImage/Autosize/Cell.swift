@@ -26,7 +26,7 @@ class Cell: UICollectionViewCell {
     super.init(coder: aDecoder)
   }
 
-  func estimatedSize(forWidth width: CGFloat) -> CGSize {
+  static func estimatedSize(forWidth width: CGFloat) -> CGSize {
     return CGSize(width: width, height: 100.0)
   }
 

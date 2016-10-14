@@ -2,6 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9fed4722-4709-4fb7-92b0-dc759a4bf9bb" name="Default" comment="Added readme file">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Autosize/Autosize/Cell.swift" afterPath="$PROJECT_DIR$/../Autosize/Autosize/Cell.swift" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../AutosizeDynamicImage/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../AutosizeDynamicImage/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../AutosizeDynamicImage/Autosize/Cell.swift" afterPath="$PROJECT_DIR$/../AutosizeDynamicImage/Autosize/Cell.swift" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Autosize.iws" />
@@ -21,18 +24,7 @@
     <favorites_list name="Autosize" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Cell.swift" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Autosize/Cell.swift">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="251">
-              <caret line="28" column="64" selection-start-line="28" selection-start-column="64" selection-end-line="28" selection-end-column="64" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../../.." />
@@ -89,7 +81,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Cidr.FilesView" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -118,6 +109,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Cidr.FilesView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -200,11 +192,13 @@
       <workItem from="1476486353006" duration="523000" />
       <workItem from="1476487097667" duration="81000" />
       <workItem from="1476487220966" duration="3000" />
+      <workItem from="1476488130108" duration="4000" />
+      <workItem from="1476488158028" duration="8000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="676000" />
+    <option name="totallyTimeSpent" value="688000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="873" extended-state="0" />
@@ -264,6 +258,14 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/Autosize/Cell.swift">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Autosize/Cell.swift">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
