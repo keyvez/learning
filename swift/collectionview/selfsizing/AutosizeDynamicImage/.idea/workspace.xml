@@ -1,12 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9fed4722-4709-4fb7-92b0-dc759a4bf9bb" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/Autosize.iml" afterPath="$PROJECT_DIR$/.idea/Autosize.iml" />
+    <list default="true" id="9fed4722-4709-4fb7-92b0-dc759a4bf9bb" name="Default" comment="Added readme file">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Autosize/Cell.swift" afterPath="$PROJECT_DIR$/Autosize/Cell.swift" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Autosize/ViewController.swift" afterPath="$PROJECT_DIR$/Autosize/ViewController.swift" />
     </list>
     <ignored path="Autosize.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -26,11 +23,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Cell.swift" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Cell.swift" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Autosize/Cell.swift">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="173">
-              <caret line="46" column="35" lean-forward="false" selection-start-line="46" selection-start-column="35" selection-end-line="46" selection-end-column="35" />
+            <state relative-caret-position="-204">
+              <caret line="48" column="74" lean-forward="false" selection-start-line="48" selection-start-column="74" selection-end-line="48" selection-end-column="74" />
               <folding>
                 <element signature="e#0#17#0" expanded="true" />
               </folding>
@@ -38,7 +35,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ViewController.swift" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ViewController.swift" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Autosize/ViewController.swift">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="-1128">
@@ -62,8 +59,8 @@
         <option value="$PROJECT_DIR$/Autosize/Info.plist" />
         <option value="$PROJECT_DIR$/Autosize/Util.swift" />
         <option value="$PROJECT_DIR$/README.md" />
-        <option value="$PROJECT_DIR$/Autosize/Cell.swift" />
         <option value="$PROJECT_DIR$/Autosize/ViewController.swift" />
+        <option value="$PROJECT_DIR$/Autosize/Cell.swift" />
       </list>
     </option>
   </component>
@@ -208,12 +205,12 @@
       <workItem from="1476485852776" duration="173000" />
       <workItem from="1476487228634" duration="320000" />
       <workItem from="1476488115057" duration="37000" />
-      <workItem from="1482614131098" duration="189000" />
+      <workItem from="1482614131098" duration="966000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="719000" />
+    <option name="totallyTimeSpent" value="1496000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1920" height="1173" extended-state="6" />
@@ -368,22 +365,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Autosize/Cell.swift">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="173">
-          <caret line="46" column="35" lean-forward="false" selection-start-line="46" selection-start-column="35" selection-end-line="46" selection-end-column="35" />
-          <folding>
-            <element signature="e#0#17#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Autosize/ViewController.swift">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1128">
           <caret line="15" column="28" lean-forward="true" selection-start-line="15" selection-start-column="28" selection-end-line="15" selection-end-column="28" />
           <folding>
             <element signature="e#0#12#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Autosize/Cell.swift">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-204">
+          <caret line="48" column="74" lean-forward="false" selection-start-line="48" selection-start-column="74" selection-end-line="48" selection-end-column="74" />
+          <folding>
+            <element signature="e#0#17#0" expanded="true" />
           </folding>
         </state>
       </provider>

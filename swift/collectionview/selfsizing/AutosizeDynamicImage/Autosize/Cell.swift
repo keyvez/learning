@@ -47,7 +47,6 @@ class Cell: UICollectionViewCell {
         imageView.topAnchor.constraint(equalTo: view.topAnchor),
         imageView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
         imageView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-//        imageView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
 
         heightLabel.topAnchor.constraint(equalTo: imageView.topAnchor),
         heightLabel.leadingAnchor.constraint(equalTo: imageView.leadingAnchor),
