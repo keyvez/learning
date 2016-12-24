@@ -8,7 +8,7 @@ class ViewController: UIViewController {
   var toolbar: UIToolbar!
   var didAddConstraints: Bool = false
   var colors:[UIColor]?
-  var heights:[CGFloat]?
+  var sizes:[CGSize]?
   var fetched:[Bool]?
 
   override func viewDidLoad() {
@@ -23,7 +23,7 @@ class ViewController: UIViewController {
     let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
     layout.minimumLineSpacing = 0
     let cellWidth = view.bounds.width
-    layout.estimatedItemSize = cell.estimatedSize(forWidth: cellWidth)
+    layout.estimatedItemSize = Cell.estimatedSize(forWidth: cellWidth)
 
     collectionView = UICollectionView(frame: view.frame, collectionViewLayout: layout)
     collectionView.dataSource = self
@@ -58,11 +58,13 @@ extension ViewController: UICollectionViewDataSource {
   func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
     if colors == nil {
       colors = [UIColor]()
-      heights = [CGFloat]()
+      sizes = [CGSize]()
       fetched = [Bool]()
       for _ in 1...10 {
         colors!.append(UIColor.randomColor())
-        heights!.append((CGFloat) (arc4random_uniform(700) + 1))
+        sizes!.append(
+            CGSize(width: collectionView.bounds.width,
+                height: (CGFloat) (arc4random_uniform(700) + 1)))
         fetched!.append(false)
       }
     }
@@ -78,8 +80,8 @@ extension ViewController: UICollectionViewDataSource {
     if self.fetched![(indexPath as NSIndexPath).item] {
       self.setImage(cell, indexPath: indexPath)
     } else {
-      let height = self.heights![(indexPath as NSIndexPath).item]
-      cell.setSize(CGSize(width: collectionView.bounds.width, height: height))
+      let height = self.sizes![(indexPath as NSIndexPath).item]
+      cell.setSize(height)
       let randomTime = 1 / (Double) (arc4random_uniform(20) + 1)
       let delayTime = DispatchTime.now() + Double(Int64(randomTime * Double(NSEC_PER_SEC))) / Double(NSEC_PER_SEC)
       DispatchQueue.main.asyncAfter(deadline: delayTime) {
@@ -92,8 +94,8 @@ extension ViewController: UICollectionViewDataSource {
   }
 
   func setImage(_ cell: Cell, indexPath: IndexPath) {
-    let height = heights![(indexPath as NSIndexPath).item]
-    let image = UIImage.imageWithColor(colors![(indexPath as NSIndexPath).item], size: CGSize(width: 375.0, height: height))
-    cell.setModel((indexPath as NSIndexPath).item, image: image)
+    let height = sizes![(indexPath as NSIndexPath).item]
+    let image = UIImage.imageWithColor(colors![(indexPath as NSIndexPath).item], size: height)
+    cell.setModel((indexPath as NSIndexPath).item, image: image, height: height)
   }
 }
