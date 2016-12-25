@@ -14,6 +14,8 @@
 		B550F8092B1469CA0162869C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B550F015E18005B082A864E3 /* AppDelegate.swift */; };
 		B550FA1D7D79669135AED99F /* Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B550FD80BC6515F4AEC6891C /* Cell.swift */; };
 		B550FC4CCCAE1E34A7B9982A /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = B550FF079A1FE0C4AA120FC2 /* README.md */; };
+		B5F4A7326179F37686BFDA86 /* UICollectionViewLeftAlignedLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5F4AF3848E8ACCD60035FA4 /* UICollectionViewLeftAlignedLayout.swift */; };
+		B5F4A9D2140D3F07F82D41FB /* words3.txt in Resources */ = {isa = PBXBuildFile; fileRef = B5F4A186EDB6AF2E91F2E994 /* words3.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		B550FD80BC6515F4AEC6891C /* Cell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cell.swift; sourceTree = "<group>"; };
 		B550FF079A1FE0C4AA120FC2 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		B550FF8AC8E2A03388B97FEC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.info; path = Info.plist; sourceTree = "<group>"; };
+		B5F4A186EDB6AF2E91F2E994 /* words3.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = words3.txt; sourceTree = "<group>"; };
+		B5F4AF3848E8ACCD60035FA4 /* UICollectionViewLeftAlignedLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UICollectionViewLeftAlignedLayout.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,8 +70,9 @@
 				B550F0A6018316B76FCEA07B /* ViewController.swift */,
 				B550FD80BC6515F4AEC6891C /* Cell.swift */,
 				B550F3DE76B2C3660EC5D6D3 /* Util.swift */,
+				B5F4AF3848E8ACCD60035FA4 /* UICollectionViewLeftAlignedLayout.swift */,
+				B5F4A186EDB6AF2E91F2E994 /* words3.txt */,
 			);
-			name = AutosizeLeftAligned;
 			path = AutosizeLeftAligned;
 			sourceTree = "<group>";
 		};
@@ -104,7 +109,7 @@
 				TargetAttributes = {
 					B550FFE1731866958F6D44C2 = {
 						DevelopmentTeam = EQHXZ8M8AV;
-						LastSwiftMigration = 0800;
+						LastSwiftMigration = 0810;
 					};
 				};
 			};
@@ -132,6 +137,7 @@
 			files = (
 				B550F4A3E103D3E6EE20F3A5 /* Assets.xcassets in Resources */,
 				B550F7D73AA7A2B66E842C65 /* LaunchScreen.storyboard in Resources */,
+				B5F4A9D2140D3F07F82D41FB /* words3.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -147,6 +153,7 @@
 				B550FA1D7D79669135AED99F /* Cell.swift in Sources */,
 				B550F3F440F5D8D3610676FB /* Util.swift in Sources */,
 				B550FC4CCCAE1E34A7B9982A /* README.md in Sources */,
+				B5F4A7326179F37686BFDA86 /* UICollectionViewLeftAlignedLayout.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
