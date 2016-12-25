@@ -6,6 +6,7 @@ The features this project includes are:
 * Text Cells
 * Multi-Element Cells
 * Left-Aligned Layout
+```
 ┌───────────────────────────────────────────┐
 │                                           │
 │                                           │
@@ -26,8 +27,10 @@ The features this project includes are:
 │ └─────┘ └────┘ └───────┘ └───────────────┘│
 │                                           │
 └───────────────────────────────────────────┘
+```
 
 The default UICollectionViewFlowLayout looks like this:
+```
 ┌───────────────────────────────────────────┐
 │                                           │
 │                                           │
@@ -48,3 +51,4 @@ The default UICollectionViewFlowLayout looks like this:
 │ └─────┘ └────┘ └───────┘ └───────────────┘│
 │                                           │
 └───────────────────────────────────────────┘
+```
