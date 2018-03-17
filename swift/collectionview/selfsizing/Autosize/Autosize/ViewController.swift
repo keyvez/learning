@@ -34,13 +34,12 @@ class ViewController: UIViewController {
     func makeCollectionView() {
         let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
         let cellWidth = view.bounds.width
-        var cell = Cell(frame: CGRectMake(0, 0, cellWidth, 0))
-        layout.estimatedItemSize = cell.estimatedSize()
+        layout.estimatedItemSize = Cell.estimatedSize(forWidth: cellWidth)
 
         collectionView = UICollectionView(frame: view.frame, collectionViewLayout: layout)
         collectionView.dataSource = self
-        collectionView.registerClass(Cell.self, forCellWithReuseIdentifier: reuseIdentifier)
-        collectionView.backgroundColor = UIColor.whiteColor()
+        collectionView.register(Cell.self, forCellWithReuseIdentifier: reuseIdentifier)
+        collectionView.backgroundColor = UIColor.white
 
         view.addSubview(collectionView)
     }
@@ -49,13 +48,13 @@ class ViewController: UIViewController {
         collectionView.translatesAutoresizingMaskIntoConstraints = false
 
         let constraints = [
-            collectionView.topAnchor.constraintEqualToAnchor(view.topAnchor),
-            collectionView.bottomAnchor.constraintEqualToAnchor(view.bottomAnchor),
-            collectionView.leadingAnchor.constraintEqualToAnchor(view.leadingAnchor),
-            collectionView.trailingAnchor.constraintEqualToAnchor(view.trailingAnchor),
+            collectionView.topAnchor.constraint(equalTo: view.topAnchor),
+            collectionView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+            collectionView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            collectionView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
         ]
 
-        constraints.forEach { $0.active = true }
+        constraints.forEach { $0.isActive = true }
     }
 }
 
@@ -63,20 +62,20 @@ class ViewController: UIViewController {
 //MARK: UICollectionViewDataSource
 extension ViewController: UICollectionViewDataSource {
 
-    func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
     }
 
-    func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return words?.count ?? 0
     }
 
-    func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCellWithReuseIdentifier(reuseIdentifier, forIndexPath: indexPath) as! Cell
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! Cell
 
-        let word = words![indexPath.item]
+        let word = words![(indexPath as NSIndexPath).item]
         let anotherWord = randomStringWithSentenceLength(10)
-        cell.setModel(indexPath.item, name: word, description: anotherWord)
+        cell.setModel((indexPath as NSIndexPath).item, name: word, description: anotherWord)
 
         return cell
     }

@@ -8,7 +8,7 @@ class ViewController: UIViewController {
   var toolbar: UIToolbar!
   var didAddConstraints: Bool = false
   var colors:[UIColor]?
-  var heights:[CGFloat]?
+  var sizes:[CGSize]?
   var fetched:[Bool]?
 
   override func viewDidLoad() {
@@ -23,13 +23,12 @@ class ViewController: UIViewController {
     let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
     layout.minimumLineSpacing = 0
     let cellWidth = view.bounds.width
-    let cell = Cell(frame: CGRect(x: 0, y: 0, width: cellWidth, height: 0))
-    layout.estimatedItemSize = cell.estimatedSize()
+    layout.estimatedItemSize = Cell.estimatedSize(forWidth: cellWidth)
 
     collectionView = UICollectionView(frame: view.frame, collectionViewLayout: layout)
     collectionView.dataSource = self
     collectionView.register(Cell.self, forCellWithReuseIdentifier: reuseIdentifier)
-    collectionView.backgroundColor = .white
+    collectionView.backgroundColor = UIColor.white
 
     view.addSubview(collectionView)
   }
@@ -59,11 +58,13 @@ extension ViewController: UICollectionViewDataSource {
   func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
     if colors == nil {
       colors = [UIColor]()
-      heights = [CGFloat]()
+      sizes = [CGSize]()
       fetched = [Bool]()
       for _ in 1...10 {
         colors!.append(UIColor.randomColor())
-        heights!.append((CGFloat) (arc4random_uniform(700) + 1))
+        sizes!.append(
+            CGSize(width: collectionView.bounds.width,
+                height: (CGFloat) (arc4random_uniform(700) + 1)))
         fetched!.append(false)
       }
     }
@@ -74,27 +75,27 @@ extension ViewController: UICollectionViewDataSource {
   func collectionView(_ collectionView: UICollectionView,
                       cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
     let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier,
-        for: indexPath as IndexPath) as! Cell
+        for: indexPath) as! Cell
 
-    if self.fetched![indexPath.item] {
-      self.setImage(cell: cell, indexPath: indexPath)
+    if self.fetched![(indexPath as NSIndexPath).item] {
+      self.setImage(cell, indexPath: indexPath)
     } else {
-      let height = self.heights![indexPath.item]
-      cell.setSize(size: CGSize(width: collectionView.bounds.width, height: height))
-      let randomTime = 1 / Double(arc4random_uniform(20)) + 1
-      let delayTime:DispatchTime = .now() + .seconds(Int(randomTime))
+      let height = self.sizes![(indexPath as NSIndexPath).item]
+      cell.setSize(height)
+      let randomTime = 1 / (Double) (arc4random_uniform(20) + 1)
+      let delayTime = DispatchTime.now() + Double(Int64(randomTime * Double(NSEC_PER_SEC))) / Double(NSEC_PER_SEC)
       DispatchQueue.main.asyncAfter(deadline: delayTime) {
-        self.setImage(cell: cell, indexPath: indexPath)
-        self.fetched![indexPath.item] = true
+        self.setImage(cell, indexPath: indexPath)
+        self.fetched![(indexPath as NSIndexPath).item] = true
       }
     }
 
     return cell
   }
 
-  func setImage(cell: Cell, indexPath: IndexPath) {
-    let height = heights![indexPath.item]
-    let image = UIImage.imageWithColor(color: colors![indexPath.item], size: CGSize(width: 375.0, height: height))
-    cell.setModel(index: indexPath.item, image: image)
+  func setImage(_ cell: Cell, indexPath: IndexPath) {
+    let height = sizes![(indexPath as NSIndexPath).item]
+    let image = UIImage.imageWithColor(color: colors![(indexPath as NSIndexPath).item], size: height)
+    cell.setModel((indexPath as NSIndexPath).item, image: image, height: height)
   }
 }

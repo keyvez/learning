@@ -5,27 +5,43 @@ class ViewController: UIViewController {
 
   var collectionView: UICollectionView!
   let reuseIdentifier = "cell"
+  var words: [String]?
   var toolbar: UIToolbar!
   var didAddConstraints: Bool = false
-  var colors:[UIColor]?
-  var heights:[CGFloat]?
 
   override func viewDidLoad() {
     super.viewDidLoad()
-    title = "Random Images"
+
+    title = "Random Sentences"
+
     makeCollectionView()
+
     addConstraints()
+
+    makeData()
+
     self.collectionView.reloadData()
   }
 
+  func makeData() {
+    words = [String]()
+    for _ in 1...200 {
+        let string = randomWord()
+        words!.append(string)
+    }
+  }
+
   func makeCollectionView() {
-    let layout = UICollectionViewFlowLayout()
-    layout.minimumLineSpacing = 0
+    let layout: UICollectionViewFlowLayout = UICollectionViewLeftAlignedLayout()
+    layout.minimumInteritemSpacing = 1
+    layout.minimumLineSpacing = 1
+
     let cellWidth = view.bounds.width
     layout.estimatedItemSize = Cell.estimatedSize(forWidth: cellWidth)
 
     collectionView = UICollectionView(frame: view.frame, collectionViewLayout: layout)
     collectionView.dataSource = self
+    collectionView.delegate = self
     collectionView.register(Cell.self, forCellWithReuseIdentifier: reuseIdentifier)
     collectionView.backgroundColor = UIColor.white
 
@@ -55,27 +71,23 @@ extension ViewController: UICollectionViewDataSource {
   }
 
   func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-    if colors == nil {
-      colors = [UIColor]()
-      heights = [CGFloat]()
-      for i in 1...100 {
-        colors!.append(UIColor.randomColor())
-        heights!.append((CGFloat) (arc4random_uniform(600) + 1))
-      }
-    }
-
-    return colors!.count
+    return words?.count ?? 0
   }
 
-  func collectionView(_ collectionView: UICollectionView,
-                      cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-    let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier,
-        for: indexPath) as! Cell
+  func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+    let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! Cell
 
-    let height = heights![(indexPath as NSIndexPath).item]
-    let image = UIImage.imageWithColor(colors![(indexPath as NSIndexPath).item], size: CGSize(width: 375.0, height: height))
-    cell.setModel((indexPath as NSIndexPath).item, image: image)
+    let word = words![(indexPath as NSIndexPath).item]
+    cell.setModel((indexPath as NSIndexPath).item, name: word)
 
     return cell
+  }
+}
+
+//MARK:
+//MARK: UICollectionViewDelegate
+extension ViewController: UICollectionViewDelegate {
+  func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+    UIAlertView(title: "Selected", message: words![indexPath.item], delegate: nil, cancelButtonTitle: "Ok").show()
   }
 }

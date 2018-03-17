@@ -12,9 +12,9 @@ func vowel() -> Bool {
   return arc4random_uniform(26) < 5 ? true: false
 }
 
-func randFrom(letters: String) -> String {
+func randFrom(_ letters: String) -> String {
   let randomIndex = Int(arc4random_uniform(UInt32(letters.characters.count)))
-  return String(letters[letters.startIndex.advancedBy(randomIndex)])
+  return String(letters[letters.characters.index(letters.startIndex, offsetBy: randomIndex)])
 }
 
 func randMiddlePunctuation() -> String {
@@ -53,10 +53,10 @@ func randMiddleLetter() -> String {
 
 func randStartingLetter() -> String {
   let letter = vowel() ? randVowel() : randConsonent()
-  return letter.uppercaseString
+  return letter.uppercased()
 }
 
-func randomStringWithSentenceLength (len: UInt32) -> String {
+func randomStringWithSentenceLength (_ len: UInt32) -> String {
   var randomString = String()
 
   let numWords = Int(arc4random_uniform(len) + 1)
